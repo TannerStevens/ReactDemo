@@ -1,6 +1,9 @@
+/*jshint node:true, browser: true, devel: true, jquery: true, indent: 2, -W097, strict:true, esnext:true*/
+'use strict';
+
 import React from 'react'
 import ReactDOM from 'react-dom'
-import sidebar from './sidebar'
+import Sidebar from './sidebar'
 
 class Index extends React.Component {
 	constructor(props){
@@ -8,14 +11,16 @@ class Index extends React.Component {
 	}
 
 	render() {
-		return (
+    return (
 			<div>
-	            <h1>
-	            	Hello, React!ASD
-	            </h1>
-	            <sidebar />
-            </div>
-        )
+        <h1>
+          Hello, React!ASD
+        </h1>
+        <Sidebar 
+          display={'This is in the sidebar!'}
+        />
+      </div>
+    )
 	}
 }
 
