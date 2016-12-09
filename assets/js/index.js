@@ -11,17 +11,22 @@ class Index extends React.Component {
 	}
 
 	render() {
-    return (
-			<div>
-        <h1>
-          Hello, React!ASD
-        </h1>
-        <Sidebar 
-          display={'This is in the sidebar!'}
-        />
-      </div>
-    )
+        return (
+    		<div style={styles.mainContainer}>
+                <Sidebar />
+                <h1>
+                    Hello, React!ASD
+                </h1>
+            </div>
+        )
 	}
+}
+const styles = {
+    mainContainer:{
+        display:'flex',
+        flexDirection:'row',
+        flex:1,
+    },
 }
 
 ReactDOM.render(<Index />, document.getElementById('container'))

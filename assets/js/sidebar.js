@@ -10,11 +10,23 @@ export default class Sidebar extends React.Component {
 
   render() {
     return (
-      <text>
-        {this.props.display}
-      </text>
+      <div style={styles.sidebar}>
+        <text> A </text>
+        <text>---</text>
+        <text>C1</text>
+        <text>C2</text>
+        <text>C3</text>
+      </div>
     )
   }
 }
 
-
+const styles = {
+    sidebar:{
+        display:'flex',
+        flexDirection:'column',
+        flex:1,
+        backgroundColor:'lightgrey',
+        maxWidth:'40px',
+    }
+}
