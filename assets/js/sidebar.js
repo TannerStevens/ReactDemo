@@ -27,6 +27,6 @@ const styles = {
         flexDirection:'column',
         flex:1,
         backgroundColor:'lightgrey',
-        maxWidth:'40px',
+        maxWidth:'45px',
     }
 }

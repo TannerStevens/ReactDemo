@@ -3,7 +3,10 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Sidebar from './sidebar'
+import {Router, Route, hashHistory, IndexRoute } from 'react-router'
+
+import MainContainer from './mainContainer'
+import QuickTest from './test'
 
 class Index extends React.Component {
 	constructor(props){
@@ -12,21 +15,13 @@ class Index extends React.Component {
 
 	render() {
         return (
-    		<div style={styles.mainContainer}>
-                <Sidebar />
-                <h1>
-                    Hello, React!ASD
-                </h1>
-            </div>
+            <Router history={hashHistory}>
+                <Route path='/' component={MainContainer}>
+                    <IndexRoute component={QuickTest}/>
+                </Route>
+            </Router>
         )
 	}
 }
-const styles = {
-    mainContainer:{
-        display:'flex',
-        flexDirection:'row',
-        flex:1,
-    },
-}
 
-ReactDOM.render(<Index />, document.getElementById('container'))
+ReactDOM.render((<Index />), document.getElementById('container'))
