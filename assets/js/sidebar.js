@@ -2,6 +2,8 @@
 'use strict';
 
 import React from 'react'
+import { Link } from 'react-router'
+
 
 export default class Sidebar extends React.Component {
   constructor(props){
@@ -11,11 +13,11 @@ export default class Sidebar extends React.Component {
   render() {
     return (
       <div style={styles.sidebar}>
-        <text> A </text>
+        <Link to='/'>A</Link>
         <text>---</text>
-        <text>C1</text>
-        <text>C2</text>
-        <text>C3</text>
+        <Link to='/cluster/1'>C1</Link>
+        <Link to='/cluster/2'>C2</Link>
+        <Link to='/cluster/3'>C3</Link>
       </div>
     )
   }
