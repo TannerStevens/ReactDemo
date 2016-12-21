@@ -7,7 +7,7 @@ export default class QuickTest extends React.Component {
 
     render(){
         return(
-            <h1>Testing React!</h1>
+            <h1>Testing!</h1>
         )
     }
 }
