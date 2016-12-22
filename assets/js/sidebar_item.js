@@ -60,6 +60,7 @@ const styles = {
     flex:1,
     minWidth:'32px',
     minHeight:'32px',
+    maxHeight:'32px',
     alignItems:'center',
     justifyContent:'center',
   },
@@ -68,7 +69,7 @@ const styles = {
   },
   maxItem:{
     position:'relative',
-    left:'15%',
+    left:'45%',
     backgroundColor:'lightblue'
   }
 }
