@@ -1,2 +1,1 @@
-./node_modules/.bin/webpack --config webpack.config.js
-python manage.py runserver
+@START "Python Dev Server" "python" manage.py runserver

@@ -25,7 +25,7 @@ SECRET_KEY = 'pt8d(8hkc$hmrub!9e=ibdgf4_8fp%*&#_3bh6)f#d+_v4^g$o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.18.109.250']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'webpack_loader'
+    'webpack_loader',
+    'channels'
 ]
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
@@ -79,6 +80,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'CVT.wsgi.application'
 
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgi_redis.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("localhost", 6379)],
+        },
+        "ROUTING": "CVT.routing.channel_routing",
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
